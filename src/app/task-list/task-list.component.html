@@ -1,0 +1,22 @@
+<h3 class="bg-warning mt-0 p-1 fs-5">
+    DANH SÁCH TASK
+</h3>
+<button (click)="themTask()" class="btn btn-success mt-2">Thêm TASK</button>
+<div *ngFor="let task of list_task" class="card mt-3">
+    <div class="card-body">
+        <h5 class="card-title">{{task.ten_task}}</h5>
+        <p class="card-text">{{task.mo_ta}}</p>
+        <div class="row border-top pt-2 mt-3">
+            <div class="col-6">
+                <p class="mb-0">Priority: {{task.priority}}</p>
+                <p class="mb-0">Status: {{task.status}}</p>
+            </div>
+            <div class="col-6 d-flex justify-content-end align-items-center">
+                <p class="mb-0 me-2">Nhân viên: {{task.nhan_vien_id}}</p>
+                <p class="mb-0">Dự án: {{task.du_an_id}}</p>
+                <button (click)="suaTask(task.id)" class="btn btn-primary btn-sm ms-2">Sửa</button>
+                <button (click)="xoaTask(task.id)" class="btn btn-danger btn-sm ms-2">Xóa</button>
+            </div>
+        </div>
+    </div>
+</div>

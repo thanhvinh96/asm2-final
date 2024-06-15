@@ -1,0 +1,31 @@
+<div class="container-fluid mt-4">
+    <h2 class="text-center mb-4">DANH SÁCH DỰ ÁN</h2>
+    <div class="d-flex justify-content-end mb-3">
+      <button (click)="themDuAn()" class="btn btn-success">Thêm dự án</button>
+    </div>
+    <table class="table table-striped table-hover table-bordered">
+      <thead class="thead-dark bg-primary text-white">
+        <tr>
+          <th class="p-3">ID</th>
+          <th class="p-3">Tên dự án</th>
+          <th class="p-3">Ngày bắt đầu</th>
+          <th class="p-3 text-end">Tiền</th>
+          <th class="p-3 text-center">Hành động</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let da of list_du_an">
+          <td class="p-3">{{da.id}}</td>
+          <td class="p-3">{{da.ten_du_an}}</td>
+          <td class="p-3">{{da.ngay_start | date: 'dd/MM/yyyy'}}</td>
+          <td class="text-end p-3">{{da.tien | number}} VNĐ</td>
+          <td class="p-3 text-center">
+            <button (click)="suaDuAn(da.id)" class="btn btn-primary btn-sm me-2">Sửa</button>
+            <button (click)="xoaDuAn(da.id)" class="btn btn-danger btn-sm">Xóa</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+

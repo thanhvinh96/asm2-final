@@ -1,0 +1,31 @@
+<form #frm1="ngForm" (ngSubmit)="xuly()" class="col-10 m-auto border border-success p-3 mt-2">
+    <div class="mb-3">
+        <label for="ten_task" class="form-label">Tên Task:</label>
+        <input type="text" name="ten_task" [(ngModel)]="data.ten_task" class="form-control" id="ten_task" required>
+    </div>
+    <div class="mb-3">
+        <label for="du_an_id" class="form-label">Dự án:</label>
+        <select name="du_an_id" [(ngModel)]="data.du_an_id" class="form-select" id="du_an_id" required>
+            <option *ngFor="let da of listDuAn" [value]="da.id">{{da.ten_du_an}}</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="nhan_vien_id" class="form-label">Nhân viên thực hiện:</label>
+        <select name="nhan_vien_id" [(ngModel)]="data.nhan_vien_id" class="form-select" id="nhan_vien_id" required>
+            <option *ngFor="let nv of listNhanVien" [value]="nv.id">{{nv.ho}} {{nv.ten}}</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="status" class="form-label">Status:</label>
+        <input type="number" name="status" [(ngModel)]="data.status" class="form-control" id="status" required>
+    </div>
+    <div class="mb-3">
+        <label for="priority" class="form-label">Priority:</label>
+        <input type="number" name="priority" [(ngModel)]="data.priority" class="form-control" id="priority" required>
+    </div>
+    <div class="mb-3">
+        <label for="mo_ta" class="form-label">Mô tả:</label>
+        <textarea rows="4" name="mo_ta" [(ngModel)]="data.mo_ta" class="form-control" id="mo_ta" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Sửa Task</button>
+</form>

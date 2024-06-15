@@ -1,0 +1,49 @@
+/* Định dạng các ô tiêu đề */
+th {
+    background-color: #f2f2f2;
+}
+
+/* Định dạng các ô chứa dữ liệu */
+td {
+    background-color: #ffffff;
+}
+
+/* Định dạng nút */
+.btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 5px;
+}
+
+/* Định dạng nút Sửa */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Định dạng nút Xóa */
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #bd2130;
+    border-color: #bd2130;
+}
+
+/* Định dạng nút Thêm */
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #218838;
+}

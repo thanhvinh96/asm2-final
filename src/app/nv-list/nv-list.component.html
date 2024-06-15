@@ -1,0 +1,25 @@
+<table class="table table-bordered border border-primary">
+    <caption align="top" class="bg-warning p-1 fw-bolder">DANH SÁCH NHÂN VIÊN</caption>
+    <tr>
+        <th class="p-1 px-2">ID</th>
+        <th class="p-2">Họ tên</th>
+        <th class="p-2">Ngày sinh</th>
+        <th class="p-2">Phái</th>
+        <th class="text-end p-1 px-2">Khu vực</th>
+        <th class="p-3 text-center">Thao tác</th>
+    </tr>
+    <tr *ngFor="let nv of list_nhan_vien">
+        <td class="p-1 px-2">{{nv.id}}</td>
+        <td class="p-2">{{nv.ho}} {{nv.ten}}</td>
+        <td class="p-2">{{nv.ngay_sinh | date:"dd/MM/yyyy"}}</td>
+        <td class="p-2">{{nv.phai ? "Nam" : "Nữ"}}</td>
+        <td class="text-end p-1 px-2">{{nv.khu_vuc}}</td>
+        <td class="p-3 text-center">
+            <button (click)="suaNhanVien(nv.id)" class="btn btn-primary btn-sm me-2">Sửa</button>
+            <button (click)="xoaNhanVien(nv.id)" class="btn btn-danger btn-sm">Xóa</button>
+        </td>
+    </tr>
+</table>
+<div class="d-flex justify-content-end mb-3">
+    <button (click)="themNhanVien()" class="btn btn-success">Thêm nhân viên</button>
+</div>

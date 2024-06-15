@@ -1,0 +1,45 @@
+/* Định dạng các nhãn */
+.form-label {
+    font-weight: bold;
+}
+
+/* Định dạng các ô chứa dữ liệu */
+.form-control {
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* Định dạng các nút */
+.btn {
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+}
+
+/* Định dạng nút Thêm nhân viên */
+.btn-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* Định dạng các radio button */
+.form-check-input {
+    width: 1.3em;
+    height: 1.3em;
+    margin-top: 0.25em;
+}

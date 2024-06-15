@@ -1,0 +1,37 @@
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Thêm Dự Án Mới</h2>
+    <form #frm1="ngForm" (ngSubmit)="xuly(frm1.value)" class="col-10 m-auto border border-success px-4 py-3 rounded shadow-sm bg-white">
+      <div class="mb-3">
+        <label for="ten_du_an" class="form-label">Tên dự án</label>
+        <input type="text" id="ten_du_an" name="ten_du_an" ngModel class="form-control" placeholder="Nhập tên dự án" required>
+      </div>
+      <div class="mb-3">
+        <label for="ngay_start" class="form-label">Ngày bắt đầu</label>
+        <input type="date" id="ngay_start" name="ngay_start" ngModel class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="tien" class="form-label">Tiền</label>
+        <input type="number" id="tien" name="tien" ngModel class="form-control" placeholder="Nhập số tiền" required>
+      </div>
+      <div class="mb-3">
+        <label for="leader" class="form-label">Leader</label>
+        <select id="leader" name="leader" ngModel class="form-control" required>
+          <option *ngFor="let nv of listNhanVien" [value]="nv.id">
+            {{nv.ho}} {{nv.ten}}
+          </option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="thanh_vien" class="form-label">Thành viên</label>
+        <select id="thanh_vien" name="thanh_vien" ngModel class="form-control" multiple="true" size="5" required>
+          <option *ngFor="let nv of listNhanVien" [value]="nv.id">
+            {{nv.ho}} {{nv.ten}}
+          </option>
+        </select>
+      </div>
+      <div class="d-grid">
+        <button type="submit" class="btn btn-success">Thêm dự án</button>
+      </div>
+    </form>
+  </div>
+  
